@@ -1,0 +1,40 @@
+<head><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"></head>
+<body>
+<div class="calculator">
+  <div class="display">
+    <input type="text" [(ngModel)]="result">
+  </div>
+  <table>
+    <tr>
+      <td colspan="2"><button (click)="clearResult()" class="clear-button">AC</button></td>
+      <td><button (click)="backspace()" class="backspace-button">⌫</button></td>
+      <td><button (click)="appendToResult('/')" class="operator-button">÷</button></td>
+    </tr>
+    <tr>
+      <td><button (click)="appendToResult('7')" class="number-button">7</button></td>
+      <td><button (click)="appendToResult('8')" class="number-button">8</button></td>
+      <td><button (click)="appendToResult('9')" class="number-button">9</button></td>
+      <td><button (click)="appendToResult('*')" class="operator-button">×</button></td>
+    </tr>
+    <tr>
+      <td><button (click)="appendToResult('4')" class="number-button">4</button></td>
+      <td><button (click)="appendToResult('5')" class="number-button">5</button></td>
+      <td><button (click)="appendToResult('6')" class="number-button">6</button></td>
+      <td><button (click)="appendToResult('-')" class="operator-button">−</button></td>
+    </tr>
+    <tr>
+      <td><button (click)="appendToResult('1')" class="number-button">1</button></td>
+      <td><button (click)="appendToResult('2')" class="number-button">2</button></td>
+      <td><button (click)="appendToResult('3')" class="number-button">3</button></td>
+      <td><button (click)="appendToResult('+')" class="operator-button">+</button></td>
+    </tr>
+    <tr>
+      <td colspan="2"><button (click)="appendToResult('0')" class="number-button wide-button">0</button></td>
+      <td><button (click)="appendToResult('.')"class="decimal-button">.</button></td>
+      <td><button (click)="updateResult()" class="operator-button equal-button">=</button></td>
+    </tr>
+  </table>
+</div>
+</body>
